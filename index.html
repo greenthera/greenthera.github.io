@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Greenthera</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/custom.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
@@ -24,7 +25,7 @@
         <div class="container">
           <div class="columns">
             <div class="column"></div>
-            <div class="column">
+            <div class="column is-half">
               <h1 class="title">
                 Contact Us
               </h1>
@@ -77,7 +78,7 @@
                 <br />
                 <div
                   id="formnotification"
-                  class="notification is-light is-invisible"
+                  class="notification is-light custom-is-opaque"
                 >
                   Hidden
                 </div>
@@ -89,86 +90,5 @@
       </div>
     </section>
     <script type="text/javascript" src="lib/main.js"></script>
-    <script type="text/javascript">
-      const ids = ["name", "contact", "description"];
-
-      function getValueById(id) {
-        return document.getElementById(id).value;
-      }
-
-      function getFormValues() {
-        return ids.reduce(function(acc, i) {
-          acc[i] = getValueById(i);
-          return acc;
-        }, {});
-      }
-
-      function clearValues() {
-        ids.forEach(id => {
-          document.getElementById(id).value = "";
-        });
-      }
-
-      function showNotification(msg, type = "success") {
-        const classes = {
-          success: "is-primary",
-          error: "is-danger"
-        };
-
-        const notificationElement = document.getElementById("formnotification");
-        notificationElement.classList.add(classes[type]);
-        notificationElement.classList.remove("is-invisible");
-        notificationElement.innerHTML = msg;
-
-        setTimeout(function() {
-          notificationElement.classList.add("is-invisible");
-          notificationElement.innerHTML = "Hidden";
-          notificationElement.classList.remove(classes[type]);
-        }, 1500);
-      }
-
-      function enableSubmitBtn() {
-        document.getElementById("submitBtn").disabled = false;
-      }
-
-      function disableSubmitBtn() {
-        document.getElementById("submitBtn").disabled = true;
-      }
-
-      function submitForm(event) {
-        const { name, contact, description } = getFormValues();
-        if (!(name && contact)) {
-          showNotification("Name and Contact are required", "error");
-          return;
-        } else if (isNaN(contact)) {
-          showNotification("Contact must be number", "error");
-          return;
-        }
-
-        var xhttp = new XMLHttpRequest();
-
-        const data = new FormData();
-        data.append("entry.1651914424", name);
-        data.append("entry.1164932861", contact);
-        data.append("entry.1151750623", description);
-
-        const qs = [...data.entries()]
-          .map(x => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
-          .join("&");
-
-        xhttp.open(
-          "POST",
-          "https://docs.google.com/forms/d/e/1FAIpQLSc8FeBRhBZc0m5Vurll75Km0sduAFXaopO0v8-5cEwVHYYIqQ/formResponse?" +
-            qs,
-          true
-        );
-        xhttp.send();
-
-        showNotification("Your response is submitted. Thank You", "success");
-        grecaptcha.reset();
-        disableSubmitBtn();
-        clearValues();
-      }
-    </script>
   </body>
 </html>

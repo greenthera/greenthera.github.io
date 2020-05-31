@@ -1,0 +1,8 @@
+.custom-is-opaque {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.custom-is-not-opaque {
+  opacity: 1;
+}
