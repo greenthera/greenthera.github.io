@@ -66,10 +66,13 @@
                 <div
                   class="g-recaptcha"
                   data-sitekey="6LdHcf4UAAAAAB-Wnyxif-TDWZSPlwrBuPH3KYQt"
+                  data-callback="enableSubmitBtn"
                 ></div>
                 <br />
                 <div class="control">
-                  <button class="button is-primary">Submit</button>
+                  <button class="button is-primary" id="submitBtn" disabled>
+                    Submit
+                  </button>
                 </div>
                 <br />
                 <div
@@ -94,14 +97,14 @@
       }
 
       function getFormValues() {
-        return ids.reduce(function (acc, i) {
+        return ids.reduce(function(acc, i) {
           acc[i] = getValueById(i);
           return acc;
         }, {});
       }
 
       function clearValues() {
-        ids.forEach((id) => {
+        ids.forEach(id => {
           document.getElementById(id).value = "";
         });
       }
@@ -109,7 +112,7 @@
       function showNotification(msg, type = "success") {
         const classes = {
           success: "is-primary",
-          error: "is-danger",
+          error: "is-danger"
         };
 
         const notificationElement = document.getElementById("formnotification");
@@ -117,11 +120,19 @@
         notificationElement.classList.remove("is-invisible");
         notificationElement.innerHTML = msg;
 
-        setTimeout(function () {
+        setTimeout(function() {
           notificationElement.classList.add("is-invisible");
           notificationElement.innerHTML = "Hidden";
           notificationElement.classList.remove(classes[type]);
         }, 1500);
+      }
+
+      function enableSubmitBtn() {
+        document.getElementById("submitBtn").disabled = false;
+      }
+
+      function disableSubmitBtn() {
+        document.getElementById("submitBtn").disabled = true;
       }
 
       function submitForm(event) {
@@ -142,7 +153,7 @@
         data.append("entry.1151750623", description);
 
         const qs = [...data.entries()]
-          .map((x) => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
+          .map(x => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
           .join("&");
 
         xhttp.open(
@@ -154,7 +165,8 @@
         xhttp.send();
 
         showNotification("Your response is submitted. Thank You", "success");
-
+        grecaptcha.reset();
+        disableSubmitBtn();
         clearValues();
       }
     </script>
