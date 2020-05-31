@@ -14,12 +14,143 @@
           <h1 class="title">
             Greenthera
           </h1>
-          <h2 class="subtitle">
-            Imagine and <strong>Create</strong>!
-          </h2>
+          <h2 class="subtitle">Imagine and <strong>Create</strong>!</h2>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+              <h1 class="title">
+                Contact Us
+              </h1>
+              <form onsubmit="submitForm(); return false">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control">
+                    <input
+                      id="name"
+                      class="input"
+                      type="text"
+                      placeholder="Enter Name"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Contact Number</label>
+                  <div class="control">
+                    <input
+                      id="contact"
+                      class="input"
+                      type="text"
+                      placeholder="Enter Contact Number"
+                    />
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Description</label>
+                  <div class="control">
+                    <textarea
+                      id="description"
+                      class="textarea"
+                      placeholder="Enter your description"
+                      class="input"
+                      type="text"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="control">
+                  <button class="button is-primary">Submit</button>
+                </div>
+                <br />
+                <div
+                  id="formnotification"
+                  class="notification is-light is-invisible"
+                >
+                  Hidden
+                </div>
+              </form>
+            </div>
+            <div class="column"></div>
+          </div>
         </div>
       </div>
     </section>
     <script type="text/javascript" src="lib/main.js"></script>
+    <script type="text/javascript">
+      const ids = ["name", "contact", "description"];
+
+      function getValueById(id) {
+        return document.getElementById(id).value;
+      }
+
+      function getFormValues() {
+        return ids.reduce(function (acc, i) {
+          acc[i] = getValueById(i);
+          return acc;
+        }, {});
+      }
+
+      function clearValues() {
+        ids.forEach((id) => {
+          document.getElementById(id).value = "";
+        });
+      }
+
+      function showNotification(msg, type = "success") {
+        const classes = {
+          success: "is-primary",
+          error: "is-danger",
+        };
+
+        const notificationElement = document.getElementById("formnotification");
+        notificationElement.classList.add(classes[type]);
+        notificationElement.classList.remove("is-invisible");
+        notificationElement.innerHTML = msg;
+
+        setTimeout(function () {
+          notificationElement.classList.add("is-invisible");
+          notificationElement.innerHTML = "Hidden";
+          notificationElement.classList.remove(classes[type]);
+        }, 1500);
+      }
+
+      function submitForm(event) {
+        const { name, contact, description } = getFormValues();
+        if (!(name && contact)) {
+          showNotification("Name and Contact are required", "error");
+          return;
+        } else if (isNaN(contact)) {
+          showNotification("Contact must be number", "error");
+          return;
+        }
+
+        var xhttp = new XMLHttpRequest();
+
+        const data = new FormData();
+        data.append("entry.1651914424", name);
+        data.append("entry.1164932861", contact);
+        data.append("entry.1151750623", description);
+
+        const qs = [...data.entries()]
+          .map((x) => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
+          .join("&");
+
+        xhttp.open(
+          "POST",
+          "https://docs.google.com/forms/d/e/1FAIpQLSc8FeBRhBZc0m5Vurll75Km0sduAFXaopO0v8-5cEwVHYYIqQ/formResponse?" +
+            qs,
+          true
+        );
+        xhttp.send();
+
+        showNotification("Your response is submitted. Thank You", "success");
+
+        clearValues();
+      }
+    </script>
   </body>
 </html>
