@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;600&display=swap");
+
+:root {
+  --blue: #29b6f6;
+  --gray: #424242;
+  --amber: #ffb300;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+  overflow: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 16px;
+}
+.nav {
+  height: 90px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  width: 90%;
+}
+
+.nav .title {
+  font-size: 2.5rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.border-gray {
+  border-color: var(--gray);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../img/intro.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position-x: 90%;
+}
+
+.intro .intro-content {
+  width: 40%;
+}
+
+.intro .intro-content .title {
+  color: var(--blue);
+  font-size: 3.5rem;
+}
+
+.intro .intro-content .title span {
+  color: var(--amber);
+}
+
+.intro .intro-content .subtitle {
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+
+.intro .intro-content .subtitle span {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.featured {
+  min-height: 100vh;
+}
+
+.featured .title {
+  font-size: 1.5rem;
+  padding-top: 12px;
+  color: var(--gray);
+}
+
+.featured .featured-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured .featured-content .card {
+  height: 280px;
+  margin: 8px;
+  flex-basis: calc((100% - 48px) / 3);
+  display: flex;
+  align-items: center;
+}
+
+.featured .featured-content .card img {
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  object-fit: cover;
+}
+.featured .featured-content .card div {
+  width: 60%;
+  padding: 8px;
+  color: var(--gray);
+}
+
+.card {
+  height: 200px;
+  cursor: pointer;
+  box-shadow: 0 8px 40px -12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 16px 70px -12.125px rgba(0, 0, 0, 0.3);
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.property-page-content {
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    height: 130px;
+  }
+
+  .intro {
+    background-size: 85% 50%;
+    background-position-x: 25%;
+  }
+
+  .intro .intro-content {
+    width: 90%;
+    margin-top: 55%;
+  }
+
+  .featured .featured-content .card {
+    flex-basis: 100%;
+  }
+
+  .property-page-content {
+    padding-top: 140px;
+  }
+}
