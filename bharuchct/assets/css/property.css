@@ -9,9 +9,6 @@
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(41, 182, 246, 0.9), rgba(0, 0, 0, 0.9)),
-    url("../properties/city-center/img/intro.jpg") fixed center center;
-  background-size: cover;
   padding: 120px 0;
   height: 100vh;
   display: flex;
