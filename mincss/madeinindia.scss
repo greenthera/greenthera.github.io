@@ -5,20 +5,45 @@ $white: #ffffff;
 $black: #212121;
 $light-gray: #616161;
 
-$prefix: "india";
-
 $theme-colors: (
-  "orange": $orange,
-  "blue": $blue,
-  "green": $green,
+  "primary": $orange,
+  "secondary": $blue,
+  "tertiary": $green,
 );
 
+$normal: 8;
+$dense: 4;
+
 @each $color, $value in $theme-colors {
-  .#{$prefix}-h-#{$color} {
+  .stripe-h-#{$color} {
     background: repeating-linear-gradient(
       to bottom,
-      #{$value} 0px 8px,
-      #{$white} 8px 16px
+      #{$value} 0px #{$normal}px,
+      #{$white} #{$normal}px #{$normal + $normal}px
+    );
+  }
+
+  .stripe-h-#{$color}-d {
+    background: repeating-linear-gradient(
+      to bottom,
+      #{$value} 0px #{$dense}px,
+      #{$white} #{$dense}px #{$dense + $dense}px
+    );
+  }
+
+  .stripe-h-#{$color} {
+    background: repeating-linear-gradient(
+      to right,
+      #{$value} 0px #{$normal}px,
+      #{$white} #{$normal}px #{$normal + $normal}px
+    );
+  }
+
+  .stripe-v-#{$color}-d {
+    background: repeating-linear-gradient(
+      to right,
+      #{$value} 0px #{$normal}px,
+      #{$white} #{$normal}px #{$normal + $dense}px
     );
   }
 }

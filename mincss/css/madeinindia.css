@@ -1,13 +1,49 @@
-.india-h-orange {
+.stripe-h-primary {
   background: repeating-linear-gradient(to bottom, #ffa500 0px 8px, #ffffff 8px 16px);
 }
 
-.india-h-blue {
+.stripe-h-primary-d {
+  background: repeating-linear-gradient(to bottom, #ffa500 0px 4px, #ffffff 4px 8px);
+}
+
+.stripe-h-primary {
+  background: repeating-linear-gradient(to right, #ffa500 0px 8px, #ffffff 8px 16px);
+}
+
+.stripe-v-primary-d {
+  background: repeating-linear-gradient(to right, #ffa500 0px 8px, #ffffff 8px 12px);
+}
+
+.stripe-h-secondary {
   background: repeating-linear-gradient(to bottom, #0000ff 0px 8px, #ffffff 8px 16px);
 }
 
-.india-h-green {
+.stripe-h-secondary-d {
+  background: repeating-linear-gradient(to bottom, #0000ff 0px 4px, #ffffff 4px 8px);
+}
+
+.stripe-h-secondary {
+  background: repeating-linear-gradient(to right, #0000ff 0px 8px, #ffffff 8px 16px);
+}
+
+.stripe-v-secondary-d {
+  background: repeating-linear-gradient(to right, #0000ff 0px 8px, #ffffff 8px 12px);
+}
+
+.stripe-h-tertiary {
   background: repeating-linear-gradient(to bottom, #008000 0px 8px, #ffffff 8px 16px);
+}
+
+.stripe-h-tertiary-d {
+  background: repeating-linear-gradient(to bottom, #008000 0px 4px, #ffffff 4px 8px);
+}
+
+.stripe-h-tertiary {
+  background: repeating-linear-gradient(to right, #008000 0px 8px, #ffffff 8px 16px);
+}
+
+.stripe-v-tertiary-d {
+  background: repeating-linear-gradient(to right, #008000 0px 8px, #ffffff 8px 12px);
 }
 
 /*# sourceMappingURL=madeinindia.css.map */
