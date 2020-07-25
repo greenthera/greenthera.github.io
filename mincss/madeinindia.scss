@@ -31,7 +31,7 @@ $dense: 4;
     );
   }
 
-  .stripe-h-#{$color} {
+  .stripe-v-#{$color} {
     background: repeating-linear-gradient(
       to right,
       #{$value} 0px #{$normal}px,
@@ -42,8 +42,8 @@ $dense: 4;
   .stripe-v-#{$color}-d {
     background: repeating-linear-gradient(
       to right,
-      #{$value} 0px #{$normal}px,
-      #{$white} #{$normal}px #{$normal + $dense}px
+      #{$value} 0px #{$dense}px,
+      #{$white} #{$dense}px #{$dense + $dense}px
     );
   }
 }

@@ -4,7 +4,8 @@
   "description": "A simple and elegant stylesheet with gradient backgrounds",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./madeinindia.scss ./css/madeinindiascss.css"
   },
   "author": "Nishant Painter",
   "license": "MIT",
