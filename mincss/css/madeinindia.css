@@ -1,51 +1,13 @@
-.min-linear {
-  background-image: linear-gradient(red, #f06d06);
+.india-h-orange {
+  background: repeating-linear-gradient(to bottom, #ffa500 0px 8px, #ffffff 8px 16px);
 }
 
-.min-h-stripes-dense {
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--orange) 0px 8px,
-    var(--white) 8px 11px,
-    var(--blue) 11px 13px,
-    var(--white) 13px 16px,
-    var(--green) 16px 24px,
-    var(--white) 24px 28px
-  );
+.india-h-blue {
+  background: repeating-linear-gradient(to bottom, #0000ff 0px 8px, #ffffff 8px 16px);
 }
 
-.min-h-stripes {
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--orange) 0px 10px,
-    var(--white) 10px 16.5px,
-    var(--blue) 16.5px 18.5px,
-    var(--white) 18.5px 25px,
-    var(--green) 25px 35px,
-    var(--white) 35px 40px
-  );
+.india-h-green {
+  background: repeating-linear-gradient(to bottom, #008000 0px 8px, #ffffff 8px 16px);
 }
 
-.min-v-stripes-dense {
-  background: repeating-linear-gradient(
-    to right,
-    var(--orange) 0px 8px,
-    var(--white) 8px 11px,
-    var(--blue) 11px 13px,
-    var(--white) 13px 16px,
-    var(--green) 16px 24px,
-    var(--white) 24px 28px
-  );
-}
-
-.min-v-stripes {
-  background: repeating-linear-gradient(
-    to right,
-    var(--orange) 0px 10px,
-    var(--white) 10px 16.5px,
-    var(--blue) 16.5px 18.5px,
-    var(--white) 18.5px 25px,
-    var(--green) 25px 35px,
-    var(--white) 35px 40px
-  );
-}
+/*# sourceMappingURL=madeinindia.css.map */
