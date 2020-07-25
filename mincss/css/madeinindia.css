@@ -1,49 +1,82 @@
-.stripe-h-primary {
-  background: repeating-linear-gradient(to bottom, #ffa500 0px 8px, #ffffff 8px 16px);
+.stripe {
+  background: repeating-linear-gradient(
+    to bottom,
+    orange,
+    orange 8px,
+    white 8px,
+    white 16px
+  );
 }
 
-.stripe-h-primary-d {
-  background: repeating-linear-gradient(to bottom, #ffa500 0px 4px, #ffffff 4px 8px);
+.stripe-d {
+  background: repeating-linear-gradient(
+    to bottom,
+    orange,
+    orange 4px,
+    white 4px,
+    white 8px
+  );
 }
 
-.stripe-v-primary {
-  background: repeating-linear-gradient(to right, #ffa500 0px 8px, #ffffff 8px 16px);
+.stripe-v {
+  background: repeating-linear-gradient(
+    to right,
+    orange,
+    orange 8px,
+    white 8px,
+    white 16px
+  );
 }
 
-.stripe-v-primary-d {
-  background: repeating-linear-gradient(to right, #ffa500 0px 4px, #ffffff 4px 8px);
+.stripe-v-d {
+  background: repeating-linear-gradient(
+    to right,
+    orange,
+    orange 4px,
+    white 4px,
+    white 8px
+  );
+  background-position: 50% 50%;
 }
 
-.stripe-h-secondary {
-  background: repeating-linear-gradient(to bottom, #0000ff 0px 8px, #ffffff 8px 16px);
+.polka-d {
+  background: radial-gradient(
+    circle at center,
+    white,
+    white 20%,
+    green,
+    green 30%,
+    white,
+    white 40%,
+    blue,
+    blue 45%,
+    white,
+    white 50%,
+    orange,
+    orange 60%,
+    transparent 60%
+  );
+  background-position: 50% 50%;
+  background-size: 30px 30px;
 }
 
-.stripe-h-secondary-d {
-  background: repeating-linear-gradient(to bottom, #0000ff 0px 4px, #ffffff 4px 8px);
+.polka {
+  background: radial-gradient(
+    circle at center,
+    white,
+    white 20%,
+    green,
+    green 30%,
+    white,
+    white 40%,
+    blue,
+    blue 45%,
+    white,
+    white 50%,
+    orange,
+    orange 60%,
+    transparent 60%
+  );
+  background-position: 50% 50%;
+  background-size: 50px 50px;
 }
-
-.stripe-v-secondary {
-  background: repeating-linear-gradient(to right, #0000ff 0px 8px, #ffffff 8px 16px);
-}
-
-.stripe-v-secondary-d {
-  background: repeating-linear-gradient(to right, #0000ff 0px 4px, #ffffff 4px 8px);
-}
-
-.stripe-h-tertiary {
-  background: repeating-linear-gradient(to bottom, #008000 0px 8px, #ffffff 8px 16px);
-}
-
-.stripe-h-tertiary-d {
-  background: repeating-linear-gradient(to bottom, #008000 0px 4px, #ffffff 4px 8px);
-}
-
-.stripe-v-tertiary {
-  background: repeating-linear-gradient(to right, #008000 0px 8px, #ffffff 8px 16px);
-}
-
-.stripe-v-tertiary-d {
-  background: repeating-linear-gradient(to right, #008000 0px 4px, #ffffff 4px 8px);
-}
-
-/*# sourceMappingURL=madeinindia.css.map */
