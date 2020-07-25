@@ -80,3 +80,75 @@
   background-position: 50% 50%;
   background-size: 50px 50px;
 }
+
+.wave {
+  background: radial-gradient(
+      circle at top center,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      white,
+      white 40%,
+      blue,
+      blue 45%,
+      white,
+      white 50%,
+      green,
+      green 60%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 125% 115%,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at -25% 115%,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      transparent 30%
+    );
+  background-size: 50px 50px;
+}
+
+.wave-d {
+  background: radial-gradient(
+      circle at top center,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      white,
+      white 40%,
+      blue,
+      blue 45%,
+      white,
+      white 50%,
+      green,
+      green 60%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 125% 115%,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at -25% 115%,
+      white,
+      white 20%,
+      orange,
+      orange 30%,
+      transparent 30%
+    );
+  background-size: 30px 30px;
+}
