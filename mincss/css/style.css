@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
-/* orange : #ff6f00 */
-/* green : #1b5e20 */
-/* white: #ffffff */
-/* blue: #0d47a1 */
-
 :root {
-  --orange: #ff6f00;
-  --green: #1b5e20;
+  --orange: #ffa500;
+  --green: #008000;
+  --blue: #0000ff;
   --white: #ffffff;
-  --blue: #0d47a1;
   --black: #212121;
   --light-gray: #616161;
 }
@@ -96,7 +91,13 @@ body {
 
 .patterns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pattern-item {
+  border-radius: 4px;
+  height: 200px;
+  width: 350px;
+  margin: 8px;
 }
