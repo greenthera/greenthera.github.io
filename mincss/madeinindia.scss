@@ -4,42 +4,13 @@ $blue: #0000ff;
 $white: #ffffff;
 $black: #212121;
 $light-gray: #616161;
-$prefix: "mincss";
-
-$horizontal: "h";
-$vertical: "v";
-
-// @mixin stripes(
-//   $name,
-//   $color-name,
-//   $horizontal-or-vertical,
-//   $primary-color-code,
-//   $secondary-color-code: $white
-// ) {
-//   .#{$prefix}-#{$horizontal-or-vertical}-#{$color-name} {
-//     background: repeating-linear-gradient(
-//       to bottom,
-//       #{$primary-color-code} 0px 8px,
-//       #{$secondary-color-code} 8px 16px
-//     );
-//   }
-// }
-
-// @include stripes("stripes", "orange", $horizontal, $orange);
-// @include stripes("stripes", "blue", $horizontal, $blue);
-// @include stripes("stripes", "green", $horizontal, $green);
 
 $prefix: "india";
 
-$theme-colors: ();
-
-$theme-colors: map-merge(
-  (
-    "orange": $orange,
-    "blue": $blue,
-    "green": $green,
-  ),
-  $theme-colors
+$theme-colors: (
+  "orange": $orange,
+  "blue": $blue,
+  "green": $green,
 );
 
 @each $color, $value in $theme-colors {
