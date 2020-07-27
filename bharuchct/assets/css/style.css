@@ -604,6 +604,15 @@ section {
   width: 100%;
 }
 
+.featured .row a,
+.featured .row a:hover,
+.featured .row a:visited {
+  text-decoration: none;
+  color: inherit;
+  display: inherit;
+  display: flex !important;
+}
+
 .featured .icon-box .intro {
   height: 200px;
   transition: 0.3s;
